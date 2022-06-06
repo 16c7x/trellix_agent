@@ -1,4 +1,0 @@
-## Shell
-Shell config.
-
-
