@@ -18,7 +18,7 @@
 #   Name of the Agent Service
 #
 class mcafee_epo_agent (
-  String  $agent_install_script   = 'puppet:///modules/files/install.sh',
+  String  $agent_install_script   = 'puppet:///modules/trellix_agent/install.sh',
   String  $agent_install_options  = '-i',
   String  $agent_service_name     = 'ma',
 ) {
