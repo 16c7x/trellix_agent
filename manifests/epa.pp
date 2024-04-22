@@ -1,6 +1,5 @@
 #
-class trellix_agent::epa {
-
+class trellix_agent::epa { 
   package { 'epa':
     ensure => installed,
     source => 'puppet///modules/files/epa.rpm',
