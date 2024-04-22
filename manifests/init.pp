@@ -23,7 +23,7 @@ class mcafee_epo_agent (
   String  $agent_service_name     = 'ma',
 ) {
 
-  file{ '/tmp/install.sh':
+  file { '/tmp/install.sh':
     ensure => 'present',
     source => $agent_install_script,
     mode   => '0700',
@@ -31,13 +31,13 @@ class mcafee_epo_agent (
     group  => 'root',
   }
 
-  exec{ 'Install':
+  exec { 'Install':
     command => "/tmp/install.sh ${agent_install_options}",
     creates => '/opt/McAfee/agent/license.txt',
     user    => root,
   }
 
-  service{ $agent_service_name:
+  service { $agent_service_name:
     ensure => running,
     enable => true,
   }
