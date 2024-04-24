@@ -22,6 +22,7 @@ class mcafee_epo_agent (
   String  $agent_install_options  = '-i',
   String  $agent_service_name     = 'ma',
 ) {
+
   file { '/tmp/install.sh':
     ensure => 'present',
     source => $agent_install_script,
